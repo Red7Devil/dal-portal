@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Dal Portal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">John Doe</string>
+    <string name="nav_header_subtitle">john.doe@gmail.com</string>
+    <string name="nav_header_role">Professor</string>
+
+    <string name="nav_header_desc">Dashboard</string>
+
+    <string name="action_user_profile">User profile</string>
+
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_ta_portal">TA Portal</string>
+    <string name="menu_events">Events</string>
+    <string name="menu_assignments">Assignments</string>
+    <string name="professor_portal">Professor Portal</string>
+    <string name="Assign_task_to_TA">Assign Task to TA</string>
+    <string name="Professor_task_dashboard">Professor Task Dashboard</string>
+    <string name="Professor_overview_dashboard">Professor Overview Dashboard</string>
+    <string name="menu_assignments_review">Assignments Review</string>
+    <string name="menu_content">Content</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Availability">Availability</string>
+    <string name="availability">Availability</string>
+    <string name="my_availability">My Availability</string>
+    <string name="select_day">Select Day</string>
+    <string name="post_hint">Enter your post here...</string>
+    <string name="submit_post">Submit Post</string>
+    <string name="create_new_post">Create New Post</string>
+    <string name="admin_portal">Admin Portal</string>
+    <string name="stat_icon_desc" />
+    <string name="registration_headline">Registration</string>
+    <string name="name_hint">Name</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="register_button">Register</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+
+
+    <string-array name="role_options">
+        <item>Professor</item>
+        <item>Student</item>
+        <item>TA</item>
+    </string-array>
+    <string name="login_headline">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string-array name="ta_edit_status_spinner_items">
+        <item>Pending</item>
+        <item>In-Progress</item>
+        <item>Completed</item>
+    </string-array>
+
+
+    <!--  JOB PORTAL  >-->
+    <string name="menu_job_posting">Job Posting</string>
+    <string name="job_posting">Job Posting</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="job_title">Enter Job Title</string>
+    <string name="job_description">Enter Job Description (min 100 chars)</string>
+    <string name="number_of_positions">Enter Number of positions</string>
+    <string name="job_location">Enter Job Location</string>
+    <string name="rate_of_pay">Enter Rate of Pay</string>
+    <string name="job_requirements">Enter Job requirements (min 100 chars)</string>
+    <string name="post_job">Post</string>
+    <string name="dalhousie_university">Dalhousie University</string>
+    <string name="studentid_s">StudentID(s)</string>
+    <string name="description">Description</string>
+    <string name="name">Name</string>
+    <string name="assignment_details">Assignment Details</string>
+
+    <string-array name="job_types">
+        <item>Full-time</item>
+        <item>Part-time</item>
+        <item>Contract</item>
+        <!-- Add other job types as needed -->
+    </string-array>
+
+</resources>

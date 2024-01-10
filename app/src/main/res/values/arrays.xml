@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Array for course options -->
+    <string-array name="course_options">
+        <item>Data Science</item>
+        <item>Web Development</item>
+        <item>Cloud Computing</item>
+    </string-array>
+
+    <!-- Array for rating options -->
+    <string-array name="rating_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>

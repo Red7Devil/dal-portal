@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ta_portal.TaPortalHomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="80dp">
+
+        <TextView
+            android:id="@+id/tasksEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All tasks completed !!"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tasksRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cobalt_blue"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/showMoreTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cobalt_blue_light"
+            android:text="Show more"
+            android:textColor="@color/cobalt_blue"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/showLessTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cobalt_blue_light"
+            android:text="Show less"
+            android:textColor="@color/cobalt_blue"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

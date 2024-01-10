@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Feedback"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etYourName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Course"
+            android:layout_marginTop="16dp"/>
+        <Spinner
+            android:id="@+id/spinnerSelectCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/course_options"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etProfessorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Professor Name"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Question 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How satisfied are you with the content and structure of this course?"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerQuestion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/rating_options" />
+
+        <!-- Question 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How relevant and useful did you find the course materials?"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerQuestion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/rating_options" />
+
+        <!-- Question 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How effective was the instructor in delivering the course content?"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerQuestion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/rating_options" />
+
+        <!-- Open-ended question -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What specific changes or additions would you suggest for this course?"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etOpenEndedQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:hint="Your suggestions"
+            android:layout_marginTop="8dp"/>
+        <Button
+            android:id="@+id/btnSubmitFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Feedback"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</ScrollView>

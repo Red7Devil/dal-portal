@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DalPortal"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.professorportal.DailyCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.professorportal.EventEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.professorportal.WeekViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.professorportal.CalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chat.users.ChatUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.assignments_review.AssignmentFeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.assignments.AssignmentDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.DalPortal.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.DiscussionForm.PostListActivity">
+
+            <!-- Any intent filters if necessary -->
+        </activity>
+        <activity android:name=".ui.DiscussionForm.CreatePostActivity">
+
+            <!-- Any intent filters if necessary -->
+        </activity>
+        <activity android:name=".ui.Admin.AdminPortalActivity">
+
+            <!-- You can also add an intent-filter here if this activity is an entry point for some action -->
+        </activity>
+    </application>
+
+</manifest>

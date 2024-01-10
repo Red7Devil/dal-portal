@@ -1,0 +1,71 @@
+<!-- activity_assignment_feedback.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.assignments_review.AssignmentFeedbackActivity"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textAssignmentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textStudentId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textAssignmentName"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="16sp" />
+
+
+    <!-- Add Button for Downloading file -->
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textStudentId"
+        android:layout_marginTop="16dp"
+        android:text="Download File" />
+
+
+    <!-- Add EditText for Score -->
+    <EditText
+        android:id="@+id/editScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDownload"
+        android:layout_marginTop="16dp"
+        android:hint="Score (0-100)"
+        android:inputType="number"
+        android:maxLines="1" />
+
+    <!-- Add EditText for Feedback -->
+    <EditText
+        android:id="@+id/editFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editScore"
+        android:layout_marginTop="16dp"
+        android:hint="Feedback"
+        android:inputType="textMultiLine"
+        android:maxLines="5" />
+
+    <!-- Add Button for Submission -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editFeedback"
+        android:layout_marginTop="16dp"
+        android:text="Submit" />
+
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.job_portal.job_posting.JobPostingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Job Title -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutJobTitle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/job_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconDrawable="@drawable/ic_title_"
+            >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/jobTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Job Description -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutJobDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/job_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutJobTitle"
+                app:startIconDrawable="@drawable/ic_jobtext"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/jobDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Job Type Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutJobType"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layoutJobDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="Job Type"
+                app:startIconDrawable="@drawable/ic_contacts_24">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/jobType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Number of Positions -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNumPositions"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/number_of_positions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutJobType"
+                app:startIconDrawable="@drawable/ic_groups"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numPositions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Job Location -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutJobLocation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutNumPositions"
+            android:hint="@string/job_location"
+                app:startIconDrawable="@drawable/ic_location"
+
+                >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/jobLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Rate of Pay -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutRateOfPay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutJobLocation"
+            app:startIconDrawable="@drawable/ic_money"
+
+            android:hint="@string/rate_of_pay">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rateOfPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Job Requirements -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutJobRequirements"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/job_requirements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutRateOfPay"
+        app:startIconDrawable="@drawable/ic_jobtext"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/jobRequirements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Submit Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitJobPosting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutJobRequirements"
+                app:iconTint="@color/blue"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
+                app:icon="@drawable/ic_post_add"
+                />
+
+</androidx.constraintlayout.widget.ConstraintLayout></ScrollView></FrameLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.dalportal.ui.dashboard.DashboardFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_ta_portal"
+        android:name="com.example.dalportal.ui.ta_portal.TaPortalFragment"
+        android:label="@string/menu_ta_portal"
+        tools:layout="@layout/fragment_ta_portal" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.dalportal.ui.slideshow.EventsFragment"
+        android:label="@string/menu_events"
+        tools:layout="@layout/fragment_events" />
+
+    <fragment
+        android:id="@+id/nav_assignment"
+        android:name="com.example.dalportal.ui.assignments.AssignmentFragment"
+        android:label="@string/menu_assignments"
+        tools:layout="@layout/fragment_assignment" />
+
+
+    <fragment
+        android:id="@+id/nav_professor_portal"
+        android:name="com.example.dalportal.ui.professorportal.ProfessorPortalFragment"
+        android:label="@string/professor_portal"
+        tools:layout="@layout/fragment_professor_portal">
+
+        <action
+            android:id="@+id/action_professor_to_assign_task"
+            app:destination="@id/nav_assign_a_task_to_TA" />
+
+        <action
+            android:id="@+id/action_professor_to_task_dashboard"
+            app:destination="@id/nav_prof_task_dashboard" />
+
+        <action
+            android:id="@+id/action_professor_to_overview_dashboard"
+            app:destination="@id/nav_prof_overview_dashboard" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_assign_a_task_to_TA"
+        android:name="com.example.dalportal.ui.professorportal.AssignTaskFragment"
+        android:label="@string/Assign_task_to_TA"
+        tools:layout="@layout/fragment_assign_task" />
+
+    <fragment
+        android:id="@+id/nav_prof_task_dashboard"
+        android:name="com.example.dalportal.ui.professorportal.ProfDashboardFragment"
+        android:label="@string/Professor_task_dashboard"
+        tools:layout="@layout/fragment_assign_task" />
+
+    <fragment
+        android:id="@+id/nav_prof_overview_dashboard"
+        android:name="com.example.dalportal.ui.professorportal.ProfessorOverviewDashboardFragment"
+        android:label="@string/Professor_task_dashboard"
+        tools:layout="@layout/fragment_assign_task" />
+
+    <fragment
+        android:id="@+id/nav_assignment_review"
+        android:name="com.example.dalportal.ui.assignments_review.AssignmentsReviewFragment"
+        android:label="@string/menu_assignments_review"
+        tools:layout="@layout/fragment_assignments_review">
+        <action
+            android:id="@+id/action_assignmentReview_to_addAssignment"
+            app:destination="@id/nav_add_assignment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_assignment"
+        android:name="com.example.dalportal.ui.assignments_review.add_assignment.AddAssignmentFragment"
+        android:label="Add assignment"
+        tools:layout="@layout/fragment_add_assignment">
+        <action
+            android:id="@+id/action_addAssignment_to_assignmentReview"
+            app:destination="@id/nav_assignment_review" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_content"
+        android:name="com.example.dalportal.ui.content.ContentFragment"
+        android:label="@string/menu_content"
+        tools:layout="@layout/fragment_content" />
+
+    <fragment
+        android:id="@+id/nav_availability_calendar"
+        android:name="com.example.dalportal.ui.availability.ta.AvailabilityTaFragment"
+        android:label="@string/availability"
+        tools:layout="@layout/fragment_availability_ta" />
+
+    <fragment
+        android:id="@+id/nav_availability_calendar_prof"
+        android:name="com.example.dalportal.ui.availability.prof.AvailabilityProfFragment"
+        android:label="@string/availability"
+        tools:layout="@layout/fragment_availability_prof" />
+
+    <fragment
+        android:id="@+id/nav_rating"
+        android:name="com.example.dalportal.ui.rating_system.RatingAppFragment"
+        android:label="rating"
+        tools:layout="@layout/fragment_rating_app" />
+
+    <fragment
+        android:id="@+id/nav_rating_admin"
+        android:name="com.example.dalportal.ui.rating_system.RatingViewFragment"
+        android:label="rating"
+        tools:layout="@layout/fragment_rating_view" />
+
+
+    <fragment
+        android:id="@+id/nav_discussion"
+        android:name="com.example.dalportal.ui.DiscussionForm.DiscussionFragment"
+        android:label="Discussion"
+        tools:layout="@layout/fragment_availability" />
+
+    <fragment
+        android:id="@+id/nav_feedback_form"
+        android:name="com.example.dalportal.ui.feedback.FeedbackFragment"
+        android:label="Feedback Form"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/nav_admin_portal"
+        android:name="com.example.dalportal.ui.Admin.AdminFragment"
+        android:label="Admin Portal"
+        tools:layout="@layout/fragment_availability" />
+
+
+    <fragment
+        android:id="@+id/nav_event"
+        android:name="com.example.dalportal.ui.event_calendar.EventFragment"
+        android:label="Event Calendar"
+        tools:layout="@layout/fragment_event" />
+
+    <fragment
+        android:id="@+id/nav_jobPosting"
+        android:name="com.example.dalportal.ui.job_portal.job_posting.JobPostingFragment"
+        android:label="@string/menu_job_posting"
+        tools:layout="@layout/fragment_job_posting" />
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/nav_jobListing"-->
+    <!--        android:name="com.example.dalportal.ui.job_portal.job_listing.JobListingFragment"-->
+    <!--        android:label="Job Listing"-->
+    <!--        tools:layout="@layout/fragment_job_listing" />-->
+    <fragment
+        android:id="@+id/nav_jobListing"
+        android:name="com.example.dalportal.ui.job_portal.job_listing.JobListingFragment"
+        android:label="Job Listing"
+        tools:layout="@layout/fragment_job_listing">
+
+        <action
+            android:id="@+id/action_jobListingFragment_to_jobPostingFragment"
+            app:destination="@id/nav_jobPosting" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/jobDetailsFragment"
+        android:name="com.example.dalportal.ui.job_portal.job_listing.JobDetailsFragment"
+        android:label="Job Details"
+        tools:layout="@layout/fragment_job_details" />
+
+    <action
+        android:id="@+id/action_jobListingFragment_to_jobDetailsFragment"
+        app:destination="@id/jobDetailsFragment" />
+
+    <fragment
+        android:id="@+id/jobListingFragment"
+        android:name="com.example.dalportal.ui.job_portal.job_listing.JobListingFragment"
+        android:label="Job Listing"
+        tools:layout="@layout/fragment_job_listing">
+        <action
+            android:id="@+id/action_jobListingFragment_to_jobDetailsFragment"
+            app:destination="@id/jobDetailsFragment" />
+    </fragment>
+
+
+</navigation>
